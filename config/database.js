@@ -5,7 +5,7 @@ const connectDB = async () => { //promise syntax
     const conn = await mongoose.connect(process.env.DB_STRING, { // conn using mongoose connect using a variable found in .env (the place of secrets) called DB_STRING
       useNewUrlParser: true, // a parser to help with URL passed to JavaScript
       useUnifiedTopology: true, // something about how MongoDB connects
-      useFindAndModify: false, // do not allow find and modify for it is depreciated
+      // useFindAndModify: false, // do not allow find and modify for it is depreciated -- actually should not include it, makes the server unhappy
     })
 
     console.log(`MongoDB Connected: ${conn.connection.host}`) // tell us that mongodb is connected
@@ -15,4 +15,4 @@ const connectDB = async () => { //promise syntax
   }
 }
 
-module.exports = connectDB // be able to export this for use by other files using connectDB as a variable name
+module.exports = connectDB // be able to export this for use by other files using connectDB as a variable name called by server js line 9
