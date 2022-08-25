@@ -25,4 +25,4 @@ const FragranceProductSchema = new mongoose.Schema({ // make a constructor calle
 
 })
 
-module.exports = mongoose.model('FragranceProduct', FragranceProductSchema) // export this as Todo and TodoSchema for use by other files
+module.exports = mongoose.model('fragranceProduct', FragranceProductSchema) // export this as Todo and TodoSchema for use by other files
