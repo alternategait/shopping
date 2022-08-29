@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const connectDB = require('./config/database') // where to look for database connection string
 const homeRoutes = require('./routes/home') //sets up a variable (called line 16) indicating to go up a level, into routes directory and into home file.
-const todoRoutes = require('./routes/todos') //sets up a variable (called line 17) indicating to go up a level, into routes directory and into todos file
+const productsRoutes = require('./routes/products') //sets up a variable (called line 17) indicating to go up a level, into routes directory and into todos file
 
 require('dotenv').config({path: './config/.env'}) // this is how node knows how to use dotenv for environment variables
 
@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true })) // replaces body parser how to p
 app.use(express.json())// replaces body parser how to pull data out of body using JSON objects
 
 app.use('/', homeRoutes) // dealing with routers how to deal with root route in homeroutes references variable line 4
-app.use('/todos', todoRoutes) //dealing with routers how to deal with /todos route references variable line 5
+app.use('/products', productsRoutes) //dealing with routers how to deal with /todos route references variable line 5
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
