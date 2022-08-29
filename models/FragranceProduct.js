@@ -13,9 +13,13 @@ const FragranceProductSchema = new mongoose.Schema({ // make a constructor calle
     type: String, // its type is a string
     required: true, // and it is required
   }, 
-  "scent type": { // first feild (key) called todo
+  scentType: { // first feild (key) called todo
     type: String, // its type is a string
     required: true, // and it is required
+  },
+  notes: {
+    type: String, 
+    required: false,
   },
   likes: { // first feild (key) called todo
     type: Int32, // its type is a string
