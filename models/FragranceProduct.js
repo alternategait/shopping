@@ -22,8 +22,8 @@ const FragranceProductSchema = new mongoose.Schema({ // make a constructor calle
     required: false,
   },
   likes: { // first feild (key) called todo
-    type: Int32, // its type is a string
-    default: 0,
+    type: String, // its type is a string
+    default: "0",
     required: true, // and it is required
   },
 
